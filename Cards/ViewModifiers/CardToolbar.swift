@@ -15,9 +15,7 @@ struct CardToolbar: ViewModifier {
         content
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        viewState.showAllCards.toggle()
-                    }) {
+                    Button(action: { viewState.showAllCards.toggle() }) {
                         Text("Done")
                     }
                 }

@@ -12,24 +12,16 @@ struct CardBottomToolbar: View {
     
     var body: some View {
         HStack {
-            Button {
-                cardModal = .photoPicker
-            } label: {
+            Button(action: { cardModal = .photoPicker }) {
                 ToolbarButtonView(modal: .photoPicker)
             }
-            Button {
-                cardModal = .framePicker
-            } label: {
+            Button(action: { cardModal = .framePicker }) {
                 ToolbarButtonView(modal: .framePicker)
             }
-            Button {
-                cardModal = .stickerPicker
-            } label: {
+            Button(action: { cardModal = .stickerPicker }) {
                 ToolbarButtonView(modal: .stickerPicker)
             }
-            Button {
-                cardModal = .textPicker
-            } label: {
+            Button(action: { cardModal = .textPicker }) {
                 ToolbarButtonView(modal: .textPicker)
             }
         }

@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        let tap = TapGesture()
+            .onEnded { _ in
+                print("View tapped!")
+            }
+        
+        Circle()
+            .fill(Color.blue)
+            .frame(width: 100, height: 100, alignment: .center)
+            .gesture(tap)
     }
 }
 
